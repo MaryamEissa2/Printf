@@ -1,1 +1,1 @@
-print project new
+print project new (rename to printf)
