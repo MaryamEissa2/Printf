@@ -9,21 +9,21 @@
 int _printf(const char *format, ...)
 {
 	int count = 0;
-	va-list args;
+	va_list args;
 
-	if (*format == NULL)
+	if (format == NULL)
 		return (-1);
 	
 	va_start(args, format);
 	
-	while (format != '\0')
+	while (*format)
 	{
-		if (format != '%')
+		if (*format != '%')
 		{
 			write(1, format, 1);
 		}
 		format++;
-	{
+	}
 	return (count);
 }
  
