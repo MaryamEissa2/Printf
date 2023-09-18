@@ -70,11 +70,11 @@ int _puts(char *str);
 int _putchar(int c);
 
 /* print_functions.c module */
-int print_char_c(va_list ap, params_t *params);
-int print_int_i(va_list ap, params_t *params);
-int print_string_s(va_list ap, params_t *params);
-int print_percent_p(va_list ap, params_t *params);
-int print_string1(va_list ap, params_t *params);
+int print_char(va_list ap, params_t *params);
+int print_int(va_list ap, params_t *params);
+int print_string(va_list ap, params_t *params);
+int print_percent(va_list ap, params_t *params);
+int print_S(va_list ap, params_t *params);
 
 /* number.c module */
 char *convert(long int num, int base, int flags, params_t *params);
