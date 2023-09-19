@@ -9,18 +9,18 @@
 int (*get_specifier(char *s))(va_list ap, params_t *params)
 {
 	specifier_t specifiers[] = {
-		{"c", print_char},
-		{"d", print_int},
-		{"i", print_int},
-		{"s", print_string},
-		{"%", print_percent},
+		{"c", print_char_c},
+		{"d", print_St},
+		{"i", print_St},
+		{"s", print_str},
+		{"%", print_per},
 		{"b", print_binary},
 		{"o", print_octal},
 		{"u", print_unsigned},
 		{"x", print_hex},
 		{"X", print_HEX},
 		{"p", print_address},
-		{"S", print_S},
+		{"S", print_St},
 		{"r", print_rev},
 		{"R", print_rot13},
 		{NULL, NULL}
