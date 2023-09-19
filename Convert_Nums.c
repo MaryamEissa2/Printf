@@ -13,7 +13,7 @@ int print_hex(va_list ap, params_t *params)
 	int c = 0;
 	char *str;
 
-	if (params->lon_modifier)
+	if (params->l_modifier)
 		lon = (unsigned long)va_arg(ap, unsigned long);
 	else if (params->h_modifier)
 		lon = (unsigned short int)va_arg(ap, unsigned int);
@@ -43,7 +43,7 @@ int print_HEX(va_list ap, params_t *params)
 	int c = 0;
 	char *str;
 
-	if (params->lon_modifier)
+	if (params->l_modifier)
 		lon = (unsigned long)va_arg(ap, unsigned long);
 	else if (params->h_modifier)
 		lon = (unsigned short int)va_arg(ap, unsigned int);
@@ -69,7 +69,7 @@ int print_HEX(va_list ap, params_t *params)
 int print_binary(va_list ap, params_t *params)
 {
 	unsigned int num = va_arg(ap, unsigned int);
-	char *str = convert(n, 2, CONVERT_UNSIGNED, params);
+	char *str = convert(num, 2, CONVERT_UNSIGNED, params);
 	int c = 0;
 
 	if (params->hashtag_flag && num)
@@ -91,7 +91,7 @@ int print_octal(va_list ap, params_t *params)
 	char *str;
 	int c = 0;
 
-	if (params->lon_modifier)
+	if (params->l_modifier)
 		lon = (unsigned long)va_arg(ap, unsigned long);
 	else if (params->h_modifier)
 		lon = (unsigned short int)va_arg(ap, unsigned int);
