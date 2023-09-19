@@ -9,7 +9,7 @@
 int (*get_specifier(char *s))(va_list ap, params_t *params)
 {
 	specifier_t specifiers[] = {
-		{"c", print_char_c},
+		{"c", print_char},
 		{"d", print_int},
 		{"i", print_int},
 		{"s", print_string},
